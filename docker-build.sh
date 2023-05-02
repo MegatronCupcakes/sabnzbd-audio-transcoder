@@ -6,6 +6,7 @@ PROJECTNAME=`echo $DOCKERTAG | sed -e "s/\//-/g" | sed -e "s/_/-/g"`
 INFO="[$PROJECTNAME-docker-build]"
 # The project directory is always the current directory
 PROJECTDIR=`pwd`
+mkdir -p "$PROJECTDIR"/dist/
 rm "$PROJECTDIR"/dist/*
 # Assemble a list of Docker tags
 CONTAINERNAME="$PROJECTNAME-build"

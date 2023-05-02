@@ -1,5 +1,5 @@
 #!/bin/sh
-TRANSCODE_HOST=dx1.local:3000
+TRANSCODE_HOST=localhost:3000
 OUTPUT_CODEC=m4a
 # https://sabnzbd.org/wiki/scripts/post-processing-scripts
 echo transcoding $1...
