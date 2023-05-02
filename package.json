@@ -1,0 +1,21 @@
+{
+  "name": "audio-transcoder",
+  "version": "1.0.0",
+  "description": "post-processing audio transcoding for sabnzbd",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ffmpeg-static": "^5.1.0",
+    "mute": "^2.0.6",
+    "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
