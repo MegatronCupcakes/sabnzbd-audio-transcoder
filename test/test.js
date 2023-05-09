@@ -20,14 +20,14 @@ const _setup = () => {
             await fs.mkdir(testPath);
             await Promise.all(originalFiles.map((file) => {
                 return fs.cp(path.join(originalPath, file), path.join(testPath, file), {recursive: true});
-            }));            
+            }));
             await transcode({
                 body: {
                     path: testPath,
                     outputCodec: 'm4a'
                 },
                 testMode: true
-            });            
+            });
             const originalAudioFiles = await _getAudioFiles(originalPath);
             const outputFiles = await fs.readdir(testPath);
             resolve([originalPath, originalFiles, originalAudioFiles, testPath, outputFiles, async () => {
@@ -39,7 +39,7 @@ const _setup = () => {
     });
 };
 
-describe('transcode test', async function(){
+describe('transcode test', function(){
 
     this.timeout(5 * 60 * 1000);
     
