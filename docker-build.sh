@@ -20,7 +20,7 @@ echo DATETAG: $DATETAG
 echo $INFO Starting Docker build.....
 docker build -t $DATETAG "$PROJECTDIR"
 echo $INFO tagging image as latest
-`docker tag $DATETAG $DOCKERTAG:latest`
+docker tag $DATETAG $DOCKERTAG:latest
 echo $INFO outputting Docker image to dist.....
 docker save -o "$PROJECTDIR/dist/${PROJECTNAME}_$(date +"%m-%d-%Y")" $DOCKERTAG:latest
 
