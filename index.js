@@ -1,11 +1,11 @@
 import express from 'express';
-import transcode from './lib/transcode.js';
+import doTranscoding from './lib/do_transcoding.js';
 
 const app = express();
 app.use(express.json());
 
 app.post('/transcode', (request, response) => {
-    transcode(request)
+    doTranscoding(request)
     .then((successBool) => {
         if(successBool){
             response.status(200).send("transcoding complete!\n");
