@@ -14,7 +14,11 @@ app.post('/transcode', (request, response) => {
         }
     })
     .catch((error) => {
-        response.status(500).send(`transcoding error! transcoding failed :-(\n(${error.message ? error.message : error})\n`);
+        let message = 'unknown error occurred; something went wrong and slipped through the cracks.';
+        if(error){
+            message = error.message ? error.message : error
+        }
+        response.status(500).send(`transcoding error! transcoding failed :-(\n(${message})\n`);
     });
 });
 
