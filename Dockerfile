@@ -1,4 +1,4 @@
-FROM node:18-buster-slim
+FROM node:20-buster-slim
 LABEL org.opencontainers.image.authors="MegatronCupcakes"
 
 COPY ./ /app
